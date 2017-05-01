@@ -1,0 +1,32 @@
+.row {
+	@mixin clearfix;
+
+
+	&--gutters { /*fix the stickingout margin(.row)*/
+		margin-right: -50px;
+	}
+
+	&--gutters > div {
+		padding-right: 50px;
+	}
+
+	@mixin atSmall {
+		padding-top: 0rem;
+		}
+
+	@mixin atMedium {
+		&__medium-4 {
+			float: left;
+			width: 33.33%;
+		}
+
+		&__medium-8 {
+			float: right;
+			width: 66.66%;
+		}
+	}
+
+	
+	
+
+}

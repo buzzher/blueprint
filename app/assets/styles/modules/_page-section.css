@@ -1,0 +1,52 @@
+.page-section {
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+	
+	&__orange {
+		background-color: $mainOrange;
+	}
+
+	&__purple {
+		background-color: $mainPurple;
+
+		@mixin atSmall {
+			padding-top: 1.8rem;
+			padding-bottom: 1.8rem;
+		}
+	}
+
+	@mixin atSmall {
+			padding-top: 1.8rem;
+			padding-bottom: 1.8rem;
+		}
+
+	@mixin atMedium {
+			
+		}
+
+	@mixin atLarge {
+		padding-top: 2.8rem;
+		padding-bottom: 2.8rem;
+	}
+
+	&--medium {
+		padding-top: 0rem;
+
+		@mixin atSmall {
+			padding-top: 0rem;
+		}
+
+		@mixin atMedium {
+			padding-top: 2.8rem;
+		}
+	}
+
+	&--b-padding {
+		padding-bottom: 1rem;
+
+		@mixin atLarge {
+			padding-bottom: 2.8rem;
+		}
+	}
+
+}

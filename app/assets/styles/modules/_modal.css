@@ -1,0 +1,91 @@
+.modal {
+	position: fixed;
+	background-color: rgba(225, 225, 225, .89);
+	z-index: 5;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(1.1);
+	transition: all .8s ease-out;
+
+	&--is-visible {
+		transform: scale(1);
+		
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__inner {
+		position: absolute;
+		width: 100%;
+		top: 15%;
+
+		@mixin atMedium {
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+
+	&__title {
+		color: $mainBlue;
+		text-align: center;
+		padding-top: 20px;
+		font-size: 2.3rem;
+
+		@mixin atSmall {
+			font-size: 3rem;
+		}
+	}
+
+	&__description {
+		font-size: 1.5rem;
+		text-align: center;
+		padding-top: 20px;
+		padding-right: 25px;
+		padding-left: 25px;
+
+	@mixin atSmall {
+		font-size: 1.85rem;
+		padding-right: 30px;
+		padding-left: 30px;
+		}
+	}
+
+	&__bg--small-purple {
+		/*margin-top: 100px;*/
+		background-color: rgba(153, 51, 255, .5);
+		max-width: 500px;
+		margin-right: auto;
+		margin-left: auto;
+		border-radius: 10px;
+		box-shadow: 5px 5px 5px #888888;
+	}
+
+	&__x {
+		color: $mainBlue;
+		font-size: 1.8rem;
+		font-weight: 500;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		transform: scaleX(1);
+		transition: all .8s ease-out;
+		
+
+		&:hover {
+			
+			@mixin atMedium {
+				transform: scaleX(1.5);
+				
+				color: $mainOrange;
+				cursor: pointer;
+			}
+		}
+	}
+}

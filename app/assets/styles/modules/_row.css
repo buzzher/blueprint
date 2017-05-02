@@ -1,8 +1,17 @@
 .row {
 	@mixin clearfix;
 
+	@mixin atMedium {
+		&__medium-6 {
+		float: left;
+		width: 50%;
+		}
+	}
 
-	&--gutters { /*fix the stickingout margin(.row)*/
+	
+
+
+	/*&--gutters { /*fix the stickingout margin(.row)
 		margin-right: -50px;
 	}
 
@@ -27,6 +36,6 @@
 	}
 
 	
-	
+*/	
 
 }

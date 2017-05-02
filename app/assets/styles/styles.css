@@ -2,20 +2,9 @@
 @import 'base/_global';
 @import 'base/_variables';
 @import 'base/_mixins';
-@import 'modules/_main-section';
-@import 'modules/_btn';
-@import 'modules/_location-section';
-@import 'modules/_wrapper';
-@import 'modules/_page-section';
-@import 'modules/_city-section';
+@import 'modules/_section';
 @import 'modules/_row';
-@import 'modules/_headline';
-@import 'modules/_generic-content-container';
-@import 'modules/_testimonials';
-@import 'modules/_site-footer';
-@import 'modules/_site-header';
-@import 'modules/_primary-nav';
-@import 'modules/_reveal-item';
-@import 'modules/_modal';
-@import 'modules/_social-icons';
-@import 'modules/_arrow';
+@import 'modules/_cyrcle';
+
+
+

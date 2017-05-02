@@ -1,0 +1,104 @@
+.section {
+	
+	
+	@mixin atMedium {
+		position: relative;
+		max-width: 1000px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	&__area {
+		height: 180px;
+
+		@mixin atMedium {
+			height: 400px;
+		}
+		
+		&__blue {
+			background-color: blue;
+			
+		}
+
+		&__gray {
+			background-color: gray;
+			
+		}
+
+		&__pink {
+			background-color: pink;
+			
+		}
+
+		&__hotpink {
+			background-color: hotpink;
+			
+		}
+
+		&__title {
+			text-align: center;
+			vertical-align: center;
+			line-height: 100px;
+			color: #fff;
+			font-size: .8rem;
+			font-weight: 400;
+
+			@mixin atMedium {
+				font-size: 2.8rem;
+				line-height: 400px;
+				width: 100%;
+				
+			}
+			
+		}
+	}
+
+	&__cyrcle {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		background-color: $mainYellow;
+		position: fixed;
+		top: 50%;
+		right: 10px;
+		transform: translateY(-50%);
+		border: 5px solid rgba(#ffcc00, .3);
+
+		@mixin atMedium {
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			background-color: $mainYellow;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 50%;
+			margin: auto;
+			border: 8px solid rgba(#ffcc00, .1);
+		}
+
+	&__title {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		transform: translateY(-50%);
+		text-align: center;
+		color: black;
+		text-shadow: 1px 3px 5px gray;
+		font-size: 1.8rem;
+
+
+		@mixin atMedium {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			transform: translateY(-50%);
+			text-align: center;
+			color: black;
+			text-shadow: 1px 3px 5px gray;
+		}
+		
+	}
+}
+	
+}

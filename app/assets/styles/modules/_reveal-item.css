@@ -1,0 +1,11 @@
+.reveal-item {
+	opacity: 0;
+	transform: scaleX(1.5);
+	transition: all .3s ease-out;
+
+
+	&--is-visable {
+		opacity: 1;
+		transform: scaleX(1);
+	}
+}

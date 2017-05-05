@@ -1,3 +1,13 @@
+import RevealDescription from './modules/RevealDescription';
+import RevealSun from './modules/RevealSun';
+
+var revealdescription = new RevealDescription();
+var revealSun = new RevealSun();
+
+
+
+
+
 import MobileMenu from './modules/MobileMenu'; //MobileMenu its var of the path
 import RevealOnScroll from './modules/RevealOnScroll';
 //import $ from 'jquery'; for having more then one item to reveal

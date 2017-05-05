@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11227,6 +11227,78 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var RevealDescription = function () {
+	function RevealDescription() {
+		_classCallCheck(this, RevealDescription);
+
+		this.title = (0, _jquery2.default)('.section__area__title');
+		this.description = (0, _jquery2.default)('.section__area__description');
+
+		this.events();
+		this.hideItem();
+		this.showDescription();
+	}
+
+	_createClass(RevealDescription, [{
+		key: 'hideItem',
+		value: function hideItem() {
+			this.description.addClass('reveal-item');
+		}
+	}, {
+		key: 'events',
+		value: function events() {
+			//this.title.mouseover(this.showDescription.bind(this));
+			this.title.mouseleave(this.hideDescription.bind(this));
+		}
+	}, {
+		key: 'showDescription',
+		value: function showDescription() {
+			//cant do like hideDescription()
+			var description = this.description; //diff func, need var
+			this.title.mouseover(function () {
+				//mouseover
+				var data_id = (0, _jquery2.default)(this).data('id'); //Attribute
+				description.each(function () {
+					var currentDescription = this;
+					if ((0, _jquery2.default)(currentDescription).attr('id') === data_id) {
+						(0, _jquery2.default)(currentDescription).addClass('reveal-item--is-visable');
+					}
+				});
+			});
+		}
+	}, {
+		key: 'hideDescription',
+		value: function hideDescription() {
+			this.description.removeClass('reveal-item--is-visable');
+		}
+	}]);
+
+	return RevealDescription;
+}();
+
+exports.default = RevealDescription;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 var _noframework = __webpack_require__(1);
 
 var _noframework2 = _interopRequireDefault(_noframework);
@@ -11275,7 +11347,54 @@ var RevealOnScroll = function () {
 exports.default = RevealOnScroll;
 
 /***/ }),
-/* 5 */
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var RevealSun = function () {
+	function RevealSun() {
+		_classCallCheck(this, RevealSun);
+
+		this.cyrcle = (0, _jquery2.default)('.section__cyrcle');
+		this.sunOuter = (0, _jquery2.default)('.sun-outer');
+		this.events();
+	}
+
+	_createClass(RevealSun, [{
+		key: 'events',
+		value: function events() {
+			this.cyrcle.click(this.revealSun.bind(this));
+		}
+	}, {
+		key: 'revealSun',
+		value: function revealSun() {
+			this.sunOuter.toggleClass('sun-outer--is-visible');
+		}
+	}]);
+
+	return RevealSun;
+}();
+
+exports.default = RevealSun;
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11295,7 +11414,7 @@ var _noframework = __webpack_require__(1);
 
 var _noframework2 = _interopRequireDefault(_noframework);
 
-var _jquerySmoothScroll = __webpack_require__(7);
+var _jquerySmoothScroll = __webpack_require__(9);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -11385,21 +11504,29 @@ var StickyHeader = function () {
 exports.default = StickyHeader;
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+var _RevealDescription = __webpack_require__(4);
+
+var _RevealDescription2 = _interopRequireDefault(_RevealDescription);
+
+var _RevealSun = __webpack_require__(6);
+
+var _RevealSun2 = _interopRequireDefault(_RevealSun);
+
 var _MobileMenu = __webpack_require__(2);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
-var _RevealOnScroll = __webpack_require__(4);
+var _RevealOnScroll = __webpack_require__(5);
 
 var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
 
-var _StickyHeader = __webpack_require__(5);
+var _StickyHeader = __webpack_require__(7);
 
 var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
 
@@ -11409,9 +11536,13 @@ var _Modal2 = _interopRequireDefault(_Modal);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//import $ from 'jquery'; for having more then one item to reveal
-var mobileMenu = new _MobileMenu2.default(); //MobileMenu its var of the path
+var revealdescription = new _RevealDescription2.default();
+var revealSun = new _RevealSun2.default(); //MobileMenu its var of the path
 
+//import $ from 'jquery'; for having more then one item to reveal
+
+
+var mobileMenu = new _MobileMenu2.default();
 var revealOnScroll = new _RevealOnScroll2.default();
 //new RevealOnScroll($('.testimonials'), '50%'); 
 //new RevealOnScroll($('.arrow'), '10%');
@@ -11419,7 +11550,7 @@ var stickyHeader = new _StickyHeader2.default();
 var modal = new _Modal2.default();
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!

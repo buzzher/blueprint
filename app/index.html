@@ -30,32 +30,55 @@
   </header>
 
 <div class="section" id=''>
-  <div class="row">
-    <div class="row__medium-6">
-      <div class="section__area section__area__pink">pic</div> <!--  -->
-    </div> <!-- /row-6 -->
-    <div class="row__medium-6">
-     <div class="section__area section__area__blue">
-       <h3 class="section__area__title">About</h3>
-     </div> <!--  -->    
-    </div> <!-- /row-6  -->
-    
-    <div class="row__medium-6">
-      <div class="section__area section__area__gray">
-        <h3 class="section__area__title">the sun Good for you</h3>
-      </div> <!--  -->    
-    </div> <!-- /row-6  -->    
-    <div class="row__medium-6">
-      <div class="section__area section__area__hotpink">
-        <h3 class="section__area__title">Did you know ?</h3>
-      </div> <!--  -->
-    </div> <!-- /row-6  -->
-  </div> <!-- /row -->
+  <div class="wrapper">
+    <div class="row">
+      <div class="row__medium-6">
+        <div class="section__area section__area__pink">
+          <picture>
+            <source srcset='assets/images/sun-original-bigger.jpg' media="(min-width: 1380px)">
+            <source srcset='assets/images/sun-original-medium.jpg' media="(min-width: 990px)">
+            <source srcset='assets/images/sun-original-small.jpg' media="(min-width: 640px)">
+            <img srcset='assets/images/sun-original-smaller.jpg' alt='pic of the sun' class="section__area section__area__pink__img" id=''>
+          </picture>
+        </div> <!--  -->
+      </div> <!-- /row-6 -->
+      <div class="row__medium-6">
+        <div class="section__area section__area__blue generic-content-container">
+          <div class="section__area__content">
+           <h3 class="section__area__title" data-id='blue'><a href='' class=''>About</a></h3>
+           <p class="section__area__description" id='blue'>The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field</p>
+          </div> <!-- /content-->
+        </div> <!-- /section -->
+      </div> <!-- /row-6  -->
+      
+      <div class="row__medium-6">
+        <div class="section__area section__area__gray generic-content-container">
+          <div class="section__area__content">
+            <h3 class="section__area__title" data-id='gray'><a href='' class=''>The Sun is Good for you?</a></h3>
+            <p class="section__area__description" id='gray'>Why the sun is good for you</p>
+          </div> <!-- /content -->    
+        </div>  
+      </div> <!-- /row-6  -->  
+         
+      <div class="row__medium-6">
+        <div class="section__area section__area__hotpink generic-content-container">
+          <div class="section__area__content">
+            <h3 class="section__area__title" data-id='hotpink'><a href='' class=''>Did you know ?</a></h3>
+            <p class="section__area__description" id='hotpink'>One million Earths could fit inside the Sun. ... The Sun's surface area is 11,990 times that of the Earth's. The Sun contains 99.86% of the mass in the Solar System. The mass of the Sun is approximately 330,000 times greater than that of Earth</p>
+          </div>
+        </div> <!-- /section__area -->
+      </div> <!-- /row-6  -->
+    </div> <!-- /row -->
 
-  <div class="section__cyrcle">
-    <h1 class="section__cyrcle__title">The Sun</h1>
-  </div>
+    <div class="section__cyrcle">
+      <h1 class="section__cyrcle__title">The Sun</h1>
+    </div>
+  </div> <!-- /wrapper -->
 </div> <!-- /section -->
+
+<div class="sun-outer" id=''>
+  <div class="sun-outer__blur" id=''></div>
+</div>
 
   
 

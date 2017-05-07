@@ -7,7 +7,8 @@
 		top: 0;
 		opacity: 0;
 		visibility: hidden;
-
+		transition: all 1s ease-out;
+		
 	&--is-visible {
 	opacity: 1;
 	visibility: visible;
